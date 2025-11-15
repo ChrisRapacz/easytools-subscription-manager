@@ -1,0 +1,42 @@
+# WordPress
+wp-config.php
+debug.log
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# PowerShell scripts (keep only the latest version)
+create-zip-v1.3.*.ps1
+create-zip-v1.4.*.ps1
+create-zip-v1.5.[0-4].ps1
+
+# Test files
+easytools-email-tester.php
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+
+# Composer (if any)
+vendor/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

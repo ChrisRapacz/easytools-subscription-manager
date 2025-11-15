@@ -1,0 +1,506 @@
+# Polish translation for Easytools Subscription Manager
+# Copyright (C) 2025 Easytools Integration
+# This file is distributed under the same license as the Easytools Subscription Manager package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easytools Subscription Manager 3.0.0\n"
+"Report-Msgid-Bugs-To: https://easy.tools/support\n"
+"POT-Creation-Date: 2025-01-28 12:00+0000\n"
+"PO-Revision-Date: 2025-01-28 12:00+0000\n"
+"Last-Translator: Easytools Team <support@easy.tools>\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Manual\n"
+
+# Main Plugin
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+msgid "Support"
+msgstr "Wsparcie"
+
+# Admin Menu
+msgid "Easytools Subscription"
+msgstr "Subskrypcje Easytools"
+
+msgid "Easytools Sub"
+msgstr "Easytools Sub"
+
+msgid "Webhook Logs"
+msgstr "Logi Webhooków"
+
+msgid "Subscribers"
+msgstr "Subskrybenci"
+
+msgid "Webhook Testing"
+msgstr "Test Webhooków"
+
+msgid "🧪 Webhook Testing"
+msgstr "🧪 Test Webhooków"
+
+# Settings Page - Sections
+msgid "Basic Settings"
+msgstr "Podstawowe Ustawienia"
+
+msgid "Access Control"
+msgstr "Kontrola Dostępu"
+
+msgid "User Registration"
+msgstr "Rejestracja Użytkowników"
+
+msgid "Notifications"
+msgstr "Powiadomienia"
+
+# Settings Page - Fields
+msgid "Easytools Checkout URL"
+msgstr "URL do płatności Easytools"
+
+msgid "Webhook Signing Key"
+msgstr "Klucz podpisu Webhook"
+
+msgid "Protect Entire Site"
+msgstr "Chroń całą stronę"
+
+msgid "Exclude Pages (if protecting entire site)"
+msgstr "Wyklucz strony (jeśli chronisz całą stronę)"
+
+msgid "Protected Pages (if NOT protecting entire site)"
+msgstr "Chronione strony (jeśli NIE chronisz całej strony)"
+
+msgid "Prefer Easytools Automation"
+msgstr "Preferuj Automatyzację Easytools"
+
+msgid "Automation Wait Time (seconds)"
+msgstr "Czas oczekiwania na automatyzację (sekundy)"
+
+msgid "Default User Role"
+msgstr "Domyślna rola użytkownika"
+
+msgid "Send Welcome Email"
+msgstr "Wyślij email powitalny"
+
+msgid "Admin Notifications"
+msgstr "Powiadomienia dla admina"
+
+msgid "Admin Email"
+msgstr "Email admina"
+
+msgid "Save Settings"
+msgstr "Zapisz ustawienia"
+
+# Settings Page - Descriptions
+msgid "Configure basic integration settings with Easytools payment platform."
+msgstr "Skonfiguruj podstawowe ustawienia integracji z platformą płatności Easytools."
+
+msgid "Define which pages require an active subscription to access."
+msgstr "Określ, które strony wymagają aktywnej subskrypcji."
+
+msgid "Configure how user accounts are created when subscriptions are purchased."
+msgstr "Skonfiguruj sposób tworzenia kont użytkowników przy zakupie subskrypcji."
+
+msgid "Manage email notifications for subscription events."
+msgstr "Zarządzaj powiadomieniami email o zdarzeniach subskrypcji."
+
+msgid "URL to Easytools checkout where users without subscription will be redirected. User email will be automatically added to URL."
+msgstr "URL do koszyka Easytools, do którego będą przekierowywani użytkownicy bez subskrypcji. Email użytkownika zostanie automatycznie dodany do URL."
+
+msgid "Generate in Easytools → API & Webhooks. Used to verify webhook authenticity."
+msgstr "Wygeneruj w Easytools → API & Webhooki. Służy do weryfikacji autentyczności webhooków."
+
+msgid "Webhook URL:"
+msgstr "URL Webhooka:"
+
+msgid "Protect all pages except selected below"
+msgstr "Chroń wszystkie strony oprócz wybranych poniżej"
+
+msgid "If checked, entire site will be protected except pages selected in \"Exclude Pages\"."
+msgstr "Jeśli zaznaczone, cała strona będzie chroniona z wyjątkiem stron wybranych w \"Wyklucz strony\"."
+
+msgid "Pages that will be accessible without subscription (e.g. homepage, login, register)."
+msgstr "Strony, które będą dostępne bez subskrypcji (np. strona główna, logowanie, rejestracja)."
+
+msgid "Pages that require active subscription."
+msgstr "Strony, które wymagają aktywnej subskrypcji."
+
+msgid "Hold Ctrl (Cmd on Mac) to select multiple pages."
+msgstr "Przytrzymaj Ctrl (Cmd na Mac) aby wybrać wiele stron."
+
+msgid "Prefer account creation via Easytools Automation (recommended)"
+msgstr "Preferuj tworzenie kont przez Automatyzację Easytools (rekomendowane)"
+
+msgid "If checked, plugin will wait specified time for account creation by Easytools. If account is not created, webhook will create it automatically."
+msgstr "Jeśli zaznaczone, wtyczka będzie czekać określony czas na utworzenie konta przez Easytools. Jeśli konto nie zostanie utworzone, webhook utworzy je automatycznie."
+
+msgid "Time (in seconds) to wait for account creation by Easytools Automation."
+msgstr "Czas (w sekundach) oczekiwania na utworzenie konta przez Automatyzację Easytools."
+
+msgid "Role assigned to new users created by webhook."
+msgstr "Rola przypisana nowym użytkownikom tworzonym przez webhook."
+
+msgid "Send welcome email with login credentials"
+msgstr "Wyślij email powitalny z danymi do logowania"
+
+msgid "Send notifications about new/expired subscriptions"
+msgstr "Wysyłaj powiadomienia o nowych/wygasłych subskrypcjach"
+
+# Webhook Tester
+msgid "Easytools Webhook Testing"
+msgstr "Test Webhooków Easytools"
+
+msgid "Webhook Endpoint"
+msgstr "Endpoint Webhook"
+
+msgid "Copy"
+msgstr "Kopiuj"
+
+msgid "Not configured"
+msgstr "Nie ustawiono"
+
+msgid "Signing key is not configured. Set it in Settings tab."
+msgstr "Klucz podpisu nie jest ustawiony. Ustaw go w zakładce Ustawienia."
+
+msgid "How to test in Postman"
+msgstr "Jak testować w Postman"
+
+msgid "Open Postman and create a new request"
+msgstr "Otwórz Postman i utwórz nowy request"
+
+msgid "Method: POST"
+msgstr "Metoda: POST"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Set Headers:"
+msgstr "Ustaw Headers:"
+
+msgid "Select JSON payload from examples below"
+msgstr "Wybierz payload JSON z przykładów poniżej"
+
+msgid "Generate HMAC signature using calculator below"
+msgstr "Wygeneruj podpis HMAC używając kalkulatora poniżej"
+
+msgid "Send request"
+msgstr "Wyślij request"
+
+msgid "Check response and logs in \"Webhook Logs\" tab"
+msgstr "Sprawdź odpowiedź i logi w zakładce \"Logi Webhooków\""
+
+msgid "HMAC SHA256 Signature Calculator"
+msgstr "Kalkulator podpisu HMAC SHA256"
+
+msgid "Paste JSON payload to generate x-webhook-signature for Postman"
+msgstr "Wklej payload JSON, aby wygenerować podpis x-webhook-signature dla Postmana"
+
+msgid "You must first set the Signing Key in Settings tab!"
+msgstr "Musisz najpierw ustawić Klucz podpisu w zakładce Ustawienia!"
+
+msgid "JSON Payload:"
+msgstr "Payload JSON:"
+
+msgid "Generate Signature"
+msgstr "Generuj podpis"
+
+msgid "x-webhook-signature:"
+msgstr "x-webhook-signature:"
+
+msgid "Example Payloads"
+msgstr "Przykładowe Payloady"
+
+msgid "Click \"Edit\" to modify payloads before testing. Changes are temporary."
+msgstr "Kliknij \"Edytuj\" aby zmodyfikować payloady przed testowaniem. Zmiany są tymczasowe."
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "Copy JSON"
+msgstr "Kopiuj JSON"
+
+msgid "Use in calculator"
+msgstr "Użyj w kalkulatorze"
+
+msgid "Send test webhook"
+msgstr "Wyślij testowy webhook"
+
+msgid "Developer Mode"
+msgstr "Tryb deweloperski"
+
+msgid "In developer mode, webhook signature verification is DISABLED. Use only for testing!"
+msgstr "W trybie deweloperskim weryfikacja podpisu webhook jest WYŁĄCZONA. Używaj tylko do testów!"
+
+msgid "Enable developer mode (disable signature verification)"
+msgstr "Włącz tryb deweloperski (wyłącz weryfikację podpisu)"
+
+msgid "WARNING: Disable developer mode in production! This is dangerous."
+msgstr "UWAGA: Wyłącz tryb deweloperski na produkcji! To niebezpieczne."
+
+# Webhook Events
+msgid "Product Assigned"
+msgstr "Przypisanie produktu"
+
+msgid "Webhook sent when product is assigned to user (most important event)"
+msgstr "Webhook wysyłany gdy produkt zostaje przypisany do użytkownika (najważniejsze zdarzenie)"
+
+msgid "Subscription Created"
+msgstr "Utworzenie subskrypcji"
+
+msgid "Webhook sent when customer purchases subscription"
+msgstr "Webhook wysyłany gdy klient kupuje subskrypcję"
+
+msgid "Subscription Expired"
+msgstr "Wygaśnięcie subskrypcji"
+
+msgid "Webhook sent when subscription expires"
+msgstr "Webhook wysyłany gdy subskrypcja wygasa"
+
+msgid "Subscription Cancelled"
+msgstr "Anulowanie subskrypcji"
+
+msgid "Webhook sent when user cancels subscription"
+msgstr "Webhook wysyłany gdy użytkownik anuluje subskrypcję"
+
+msgid "Subscription Renewed"
+msgstr "Odnowienie subskrypcji"
+
+msgid "Webhook sent when subscription is renewed"
+msgstr "Webhook wysyłany gdy subskrypcja zostaje odnowiona"
+
+msgid "Subscription Paused"
+msgstr "Wstrzymanie subskrypcji"
+
+msgid "Webhook sent when subscription is paused"
+msgstr "Webhook wysyłany gdy subskrypcja zostaje wstrzymana"
+
+msgid "Subscription Plan Changed"
+msgstr "Zmiana planu subskrypcji"
+
+msgid "Webhook sent when user changes subscription plan"
+msgstr "Webhook wysyłany gdy użytkownik zmienia plan subskrypcji"
+
+msgid "One Time Purchase (Lifetime)"
+msgstr "Zakup jednorazowy (Lifetime)"
+
+msgid "Webhook for lifetime purchase (no renewals)"
+msgstr "Webhook dla zakupu lifetime (bez odnowień)"
+
+# JavaScript Messages
+msgid "Copied to clipboard!"
+msgstr "Skopiowano do schowka!"
+
+msgid "Edit mode enabled. Click \"Copy JSON\" or \"Send\" when done."
+msgstr "Tryb edycji włączony. Kliknij \"Kopiuj JSON\" lub \"Wyślij\" kiedy skończysz."
+
+msgid "Payload copied to clipboard!"
+msgstr "Payload skopiowany do schowka!"
+
+msgid "Signature copied to clipboard!"
+msgstr "Podpis skopiowany do schowka!"
+
+msgid "Paste JSON payload!"
+msgstr "Wklej payload JSON!"
+
+msgid "Invalid JSON format!"
+msgstr "Nieprawidłowy format JSON!"
+
+msgid "Error generating signature"
+msgstr "Błąd generowania podpisu"
+
+msgid "Send test webhook?"
+msgstr "Wysłać testowy webhook?"
+
+msgid "Check result in \"Webhook Logs\" tab"
+msgstr "Sprawdź wynik w zakładce \"Logi Webhooków\""
+
+msgid "Error sending webhook"
+msgstr "Błąd wysyłania webhooka"
+
+msgid "Developer mode ENABLED. Signature verification disabled!"
+msgstr "Tryb deweloperski WŁĄCZONY. Weryfikacja podpisu wyłączona!"
+
+msgid "Developer mode DISABLED. Signature verification enabled."
+msgstr "Tryb deweloperski WYŁĄCZONY. Weryfikacja podpisu włączona."
+
+# AJAX Responses
+msgid "Insufficient permissions"
+msgstr "Brak uprawnień"
+
+msgid "Signing key is not configured"
+msgstr "Klucz podpisu nie jest ustawiony"
+
+msgid "Payload is empty"
+msgstr "Payload jest pusty"
+
+msgid "Invalid JSON format"
+msgstr "Nieprawidłowy format JSON"
+
+msgid "Signature generated successfully"
+msgstr "Podpis wygenerowany pomyślnie"
+
+msgid "Webhook sent successfully!"
+msgstr "Webhook wysłany pomyślnie!"
+
+msgid "HTTP Error %d"
+msgstr "Błąd HTTP %d"
+
+# Access Control
+msgid "Login Required"
+msgstr "Wymagane logowanie"
+
+msgid "Log In"
+msgstr "Zaloguj się"
+
+msgid "Subscription Required"
+msgstr "Wymagana subskrypcja"
+
+msgid "Get Access"
+msgstr "Wykup dostęp"
+
+msgid "Payment URL not configured. Please contact the administrator."
+msgstr "URL płatności nie jest skonfigurowany. Skontaktuj się z administratorem."
+
+msgid "Configuration Error"
+msgstr "Błąd konfiguracji"
+
+msgid "Hello, %s!"
+msgstr "Witaj, %s!"
+
+# Shortcodes
+msgid "[Error: Payment URL not configured]"
+msgstr "[Błąd: URL płatności nie jest skonfigurowany]"
+
+msgid "Log in to see your subscription status."
+msgstr "Zaloguj się, aby zobaczyć status subskrypcji."
+
+msgid "Log in to view this content."
+msgstr "Zaloguj się, aby zobaczyć tę treść."
+
+msgid "This content is available only to users with an active subscription."
+msgstr "Ta treść jest dostępna tylko dla użytkowników z aktywną subskrypcją."
+
+msgid "Your Subscription Status"
+msgstr "Status Twojej subskrypcji"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Active"
+msgstr "Aktywna"
+
+msgid "Inactive"
+msgstr "Nieaktywna"
+
+msgid "Type:"
+msgstr "Typ:"
+
+msgid "Renewal Date:"
+msgstr "Data odnowienia:"
+
+msgid "Lifetime access - no renewals"
+msgstr "Dostęp dożywotni - bez odnowień"
+
+# User Functions
+msgid "Subscription"
+msgstr "Subskrypcja"
+
+msgid "Easytools Subscriptions"
+msgstr "Subskrypcje Easytools"
+
+msgid "User has access"
+msgstr "Użytkownik ma dostęp"
+
+msgid "Subscription Type"
+msgstr "Typ subskrypcji"
+
+msgid "Start Date"
+msgstr "Data rozpoczęcia"
+
+msgid "Renewal Date"
+msgstr "Data odnowienia"
+
+msgid "One-time Payment"
+msgstr "Jednorazowa płatność"
+
+msgid "Filter by subscription"
+msgstr "Filtruj po subskrypcji"
+
+msgid "All subscriptions"
+msgstr "Wszystkie subskrypcje"
+
+# Webhook Logs
+msgid "Date"
+msgstr "Data"
+
+msgid "Event Type"
+msgstr "Typ zdarzenia"
+
+msgid "Customer Email"
+msgstr "Email klienta"
+
+msgid "User ID"
+msgstr "ID użytkownika"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Actions"
+msgstr "Akcje"
+
+msgid "No webhook logs found."
+msgstr "Brak logów webhooków."
+
+msgid "Details"
+msgstr "Szczegóły"
+
+msgid "Webhook Details"
+msgstr "Szczegóły webhooka"
+
+msgid "Close"
+msgstr "Zamknij"
+
+msgid "Request Body (received webhook)"
+msgstr "Request Body (otrzymany webhook)"
+
+msgid "Response Body (plugin response)"
+msgstr "Response Body (odpowiedź wtyczki)"
+
+# Subscribers Page
+msgid "Users with Subscription"
+msgstr "Użytkownicy z subskrypcją"
+
+msgid "User"
+msgstr "Użytkownik"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "No active subscriptions."
+msgstr "Brak aktywnych subskrypcji."
+
+# Dashboard Widget
+msgid "📊 Easytools Subscriptions"
+msgstr "📊 Subskrypcje Easytools"
+
+msgid "Active Subscriptions"
+msgstr "Aktywne subskrypcje"
+
+msgid "Inactive"
+msgstr "Nieaktywne"
+
+msgid "View All"
+msgstr "Zobacz wszystkie"
+
+msgid "Quick Stats"
+msgstr "Szybkie statystyki"
+
+msgid "Recent Webhooks"
+msgstr "Ostatnie webhooki"
+
+msgid "No recent webhooks"
+msgstr "Brak ostatnich webhooków"

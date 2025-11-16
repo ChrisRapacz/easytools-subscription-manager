@@ -143,21 +143,24 @@ class Easytools_Webhook_Handler {
     /**
      * Verify webhook signature
      * FIXED: JSON normalization before HMAC calculation
+     * SECURITY: Improved signature verification
      */
     private function verify_webhook_signature($payload, $signature) {
         $signing_key = get_option('easytools_webhook_signing_key', '');
         $dev_mode = get_option('easytools_dev_mode', 'no') === 'yes';
 
-        // DEVELOPER MODE - skip verification
+        // SECURITY WARNING: Dev mode should only be used in development environments
+        // In production, webhooks without valid signatures will be rejected
         if ($dev_mode) {
-            error_log('Easytools Webhook: DEV MODE - Signature verification DISABLED');
+            error_log('⚠️ Easytools Webhook: DEV MODE ACTIVE - Signature verification DISABLED! This is a security risk in production.');
             return true;
         }
 
-        // If signing key is not set, skip verification (not recommended!)
+        // SECURITY: If signing key is not configured, reject all webhooks
+        // This prevents unauthorized webhook submissions
         if (empty($signing_key)) {
-            error_log('Easytools Webhook: Signing key not configured. Skipping signature verification.');
-            return true;
+            error_log('Easytools Webhook: Signing key not configured. Rejecting webhook for security.');
+            return false; // Changed from true to false for security
         }
 
         // If no signature in header

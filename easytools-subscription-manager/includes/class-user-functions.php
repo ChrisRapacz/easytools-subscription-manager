@@ -135,6 +135,7 @@ class Easytools_User_Functions {
             <?php endif; ?>
         </table>
         <?php
+        wp_nonce_field('easytools_save_subscription_fields', 'easytools_subscription_nonce');
     }
     
     /**
@@ -144,7 +145,13 @@ class Easytools_User_Functions {
         if (!current_user_can('edit_users')) {
             return;
         }
-        
+
+        // Verify nonce
+        if (!isset($_POST['easytools_subscription_nonce']) ||
+            !wp_verify_nonce($_POST['easytools_subscription_nonce'], 'easytools_save_subscription_fields')) {
+            return;
+        }
+
         update_user_meta($user_id, 'subscribed', isset($_POST['subscribed']) ? '1' : '0');
         
         if (isset($_POST['subscription_type'])) {
@@ -197,7 +204,7 @@ class Easytools_User_Functions {
      * Add subscription filter to users list
      */
     public function add_subscription_filter() {
-        $selected = isset($_GET['easytools_subscription']) ? $_GET['easytools_subscription'] : '';
+        $selected = isset($_GET['easytools_subscription']) ? sanitize_text_field($_GET['easytools_subscription']) : '';
         ?>
         <label class="screen-reader-text" for="easytools-subscription-filter">
             <?php _e('Filter by subscription', 'easytools-sub'); ?>
@@ -223,8 +230,8 @@ class Easytools_User_Functions {
         if (!isset($_GET['easytools_subscription']) || empty($_GET['easytools_subscription'])) {
             return $query;
         }
-        
-        $subscription_status = $_GET['easytools_subscription'];
+
+        $subscription_status = sanitize_text_field($_GET['easytools_subscription']);
         
         $meta_query = array(
             array(

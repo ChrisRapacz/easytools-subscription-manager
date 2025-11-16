@@ -93,14 +93,22 @@ class Easytools_Dashboard_Widget {
         
         // Active subscriptions
         $active = $wpdb->get_var(
-            "SELECT COUNT(*) FROM {$wpdb->usermeta} 
-             WHERE meta_key = 'subscribed' AND meta_value = '1'"
+            $wpdb->prepare(
+                "SELECT COUNT(*) FROM {$wpdb->usermeta}
+                 WHERE meta_key = %s AND meta_value = %s",
+                'subscribed',
+                '1'
+            )
         );
-        
+
         // Inactive subscriptions
         $inactive = $wpdb->get_var(
-            "SELECT COUNT(*) FROM {$wpdb->usermeta} 
-             WHERE meta_key = 'subscribed' AND meta_value = '0'"
+            $wpdb->prepare(
+                "SELECT COUNT(*) FROM {$wpdb->usermeta}
+                 WHERE meta_key = %s AND meta_value = %s",
+                'subscribed',
+                '0'
+            )
         );
         
         // New subscriptions today

@@ -26,10 +26,42 @@ class Easytools_Admin_Settings {
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
         add_action('admin_head', array($this, 'add_premium_styles'));
+        add_action('admin_notices', array($this, 'show_security_warnings'));
         add_action('wp_ajax_easytools_export_logs', array($this, 'handle_export_logs'));
         add_action('wp_ajax_easytools_toggle_user_access', array($this, 'handle_toggle_user_access'));
         add_action('wp_ajax_easytools_create_bouncer_page', array($this, 'handle_create_bouncer_page'));
         add_action('wp_ajax_easytools_get_bouncer_html', array($this, 'handle_get_bouncer_html'));
+    }
+
+    /**
+     * Show security warnings in admin
+     */
+    public function show_security_warnings() {
+        // Only show on plugin pages
+        $screen = get_current_screen();
+        if (!$screen || strpos($screen->id, 'easytools') === false) {
+            return;
+        }
+
+        $dev_mode = get_option('easytools_dev_mode', 'no') === 'yes';
+        $signing_key = get_option('easytools_webhook_signing_key', '');
+
+        // Warning for dev mode
+        if ($dev_mode) {
+            echo '<div class="notice notice-error"><p>';
+            echo '<strong>⚠️ Security Warning:</strong> Developer Mode is enabled! ';
+            echo 'Webhook signature verification is disabled. This is a serious security risk in production. ';
+            echo 'Please disable Developer Mode immediately unless you are actively testing.';
+            echo '</p></div>';
+        }
+
+        // Warning for missing signing key
+        if (empty($signing_key)) {
+            echo '<div class="notice notice-warning"><p>';
+            echo '<strong>⚠️ Configuration Required:</strong> Webhook Signing Key is not configured. ';
+            echo 'All webhooks are being rejected for security. Please configure the Webhook Signing Key in the settings.';
+            echo '</p></div>';
+        }
     }
 
     /**

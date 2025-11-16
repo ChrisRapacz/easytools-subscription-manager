@@ -4,7 +4,7 @@ Tags: subscription, membership, easytools, access control, webhooks
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -200,6 +200,15 @@ WordPress email delivery can be unreliable. We recommend installing a SMTP plugi
 
 == Changelog ==
 
+= 1.5.6 =
+* Security: Fixed SQL injection vulnerability in dashboard widget statistics
+* Security: Added nonce verification to user profile subscription fields (CSRF protection)
+* Security: Sanitized GET parameters in user filtering to prevent XSS attacks
+* Security: Improved webhook signature verification - now rejects unsigned webhooks when signing key not configured
+* Security: Added prominent admin security warnings for developer mode
+* WordPress.org: Created complete readme.txt for plugin repository
+* WordPress.org: Plugin now ready for submission with all security best practices
+
 = 1.5.5 =
 * Added automatic synchronization between Checkout URL and Product URL
 * Intelligent form field auto-filling (no need to enter URLs twice)
@@ -263,6 +272,9 @@ WordPress email delivery can be unreliable. We recommend installing a SMTP plugi
 * Welcome email system
 
 == Upgrade Notice ==
+
+= 1.5.6 =
+Critical security update! Fixes SQL injection, CSRF, and XSS vulnerabilities. Strongly recommended for all users to upgrade immediately.
 
 = 1.5.5 =
 Improved URL synchronization and auto-filling. Upgrade for better user experience when configuring bouncer pages.

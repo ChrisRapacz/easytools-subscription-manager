@@ -3,7 +3,7 @@
  * Plugin Name: Easytools Subscription Manager
  * Plugin URI: https://easy.tools
  * Description: Complete subscription management system for Easytools with webhooks, access control, API token security, and premium admin interface
- * Version: 1.5.5
+ * Version: 1.5.6
  * Author: Chris Rapacz
  * Author URI: https://www.chrisrapacz.com
  * License: GPL v2 or later
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('EASYTOOLS_SUB_VERSION', '1.5.5');
+define('EASYTOOLS_SUB_VERSION', '1.5.6');
 define('EASYTOOLS_SUB_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('EASYTOOLS_SUB_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('EASYTOOLS_SUB_PLUGIN_FILE', __FILE__);
